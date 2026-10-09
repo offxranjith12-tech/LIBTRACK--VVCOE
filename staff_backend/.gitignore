@@ -1,0 +1,56 @@
+# ==========================================
+# LibTrack Backend - .gitignore (Spring Boot & Maven)
+# ==========================================
+
+# Compiled Class files & Build Outputs
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+
+# Maven distribution / local bundled tooling
+apache-maven-*/
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# Logs and runtime debugging files
+*.log
+backend.log
+log/
+logs/
+hs_err_pid*
+replay_pid*
+
+# IDE & Editor files
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.settings/
+.project
+.classpath
+.factorypath
+bin/
+out/
+nbproject/
+.nb-gradle/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Environment / Local Secrets Overrides
+application-local.yml
+application-local.properties
+application-dev.yml
+*.env
+*.env.local

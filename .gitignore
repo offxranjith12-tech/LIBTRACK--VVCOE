@@ -1,0 +1,47 @@
+# ==========================================
+# LibTrack Root - .gitignore
+# ==========================================
+
+# JVM crash logs & runtime dumps
+hs_err_pid*
+replay_pid*
+*.log
+
+# IDE & Editor files
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Backend ignored artifacts
+staff_backend/target/
+staff_backend/apache-maven-*/
+staff_backend/*.log
+staff_backend/backend.log
+
+# Frontend ignored artifacts
+staff_frontend/.dart_tool/
+staff_frontend/build/
+staff_frontend/.flutter-plugins
+staff_frontend/.flutter-plugins-dependencies
+staff_frontend/.widget_preview/
+staff_frontend/android/.gradle/
+staff_frontend/android/local.properties
+staff_frontend/android/app/build/
+staff_frontend/windows/flutter/ephemeral/
+staff_frontend/ios/Pods/
+staff_frontend/ios/.symlinks/
+staff_frontend/macos/Pods/
+staff_frontend/macos/Flutter/ephemeral/
+staff_frontend/linux/flutter/ephemeral/
