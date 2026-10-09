@@ -1,0 +1,44 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: libtrack-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:-ranjith64}
+      MYSQL_DATABASE: ${DB_NAME:-libtrack}
+    ports:
+      - "3306:3306"
+    volumes:
+      - libtrack_mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-p${DB_PASSWORD:-ranjith64}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build: .
+    container_name: libtrack-backend
+    restart: unless-stopped
+    depends_on:
+      mysql:
+        condition: service_healthy
+    environment:
+      DB_HOST: mysql
+      DB_PORT: 3306
+      DB_NAME: ${DB_NAME:-libtrack}
+      DB_USERNAME: root
+      DB_PASSWORD: ${DB_PASSWORD:-ranjith64}
+      JWT_SECRET: ${JWT_SECRET:-libtrack-super-secret-key-change-this-in-production-min-32-chars}
+      # DEFAULT_ADMIN_ID: ${DEFAULT_ADMIN_ID:-VVCE-LIB-ADM-001}
+      # DEFAULT_ADMIN_PASSWORD: ${DEFAULT_ADMIN_PASSWORD:-ChangeMe@123}
+      SERVER_PORT: 8080
+      UPLOADS_DIR: /app/uploads
+    ports:
+      - "8080:8080"
+    volumes:
+      - libtrack_uploads:/app/uploads
+
+volumes:
+  libtrack_mysql_data:
+  libtrack_uploads:
