@@ -1,0 +1,26 @@
+# Backend build artifacts
+target/
+**/target/
+uploads/
+**/uploads/
+
+# Flutter build artifacts
+.dart_tool/
+**/.dart_tool/
+build/
+**/build/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+
+# IDE / OS
+.idea/
+**/.idea/
+.vscode/
+**/.vscode/
+*.iml
+**/*.iml
+.DS_Store
+Thumbs.db
+*.log
