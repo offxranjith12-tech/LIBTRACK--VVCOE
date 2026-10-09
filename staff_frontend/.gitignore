@@ -1,0 +1,81 @@
+# ==========================================
+# LibTrack Frontend - .gitignore (Flutter & Dart)
+# ==========================================
+
+# Dart & Flutter Build Outputs and Tooling
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+.widget_preview/
+
+# Symbol & debug artifacts
+app.*.symbols
+app.*.map.json
+flutter_*.png
+
+# Testing and Code Coverage
+coverage/
+*.lcov
+test/.test_coverage.dart
+
+# IDE and Editor files
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+
+# Android specific
+android/.gradle/
+android/local.properties
+android/app/build/
+android/key.properties
+*.keystore
+*.jks
+android/captures/
+.externalNativeBuild/
+.cxx/
+
+# iOS & macOS specific
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/Flutter.podspec
+ios/Flutter/Generated.xcconfig
+ios/Flutter/app.framework
+ios/Flutter/Flutter.framework
+ios/Flutter/Generated.framework
+ios/ServiceDefinitions.json
+macos/Pods/
+macos/.symlinks/
+macos/Flutter/ephemeral/
+macos/Flutter/Generated.xcconfig
+*.mode1v3
+*.mode2v3
+*.moved-aside
+*.pbxuser
+*.perspectivev3
+
+# Windows specific
+windows/flutter/ephemeral/
+
+# Linux specific
+linux/flutter/ephemeral/
+
+# Environment / Local Configuration & Secrets
+.env
+.env.*
+!.env.example
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
